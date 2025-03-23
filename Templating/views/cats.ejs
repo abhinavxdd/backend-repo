@@ -4,19 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random number</title>
+    <title>All cats</title>
     <%- include('partials/head') %>
 </head>
 
 <body>
     <%- include('partials/navbar') %>
-    <h1>Your random number is : <%= rand %>
-    </h1>
-    <% if(rand % 2===0){%>
-        <h2>It is an even number</h2>
-        <% } else { %>
-            <h2>It is an odd number</h2>
+    <h1>All the cats</h1>
+    <ul>
+        <% for (let cat of cats){ %>
+            <li>
+                <%= cat %>
+            </li>
             <% } %>
+    </ul>
+
 </body>
 
 </html>
