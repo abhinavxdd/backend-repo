@@ -46,7 +46,7 @@ app.post('/comments', (req, res) => {
 app.get('/comments/:id', (req, res) => {
     const { id } = req.params;
     const comment = comments.find(c => c.id.trim() === id.trim())
-    console.log(comment);
+    //console.log(comment);
     res.render('comments/show', { comment })
 })
 
